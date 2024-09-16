@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Clone</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+  type="text/javascript"
+  src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements@2.0.0/dist/js/tw-elements.umd.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements@2.0.0/dist/js/tw-elements.umd.min.js"></script>
+    <script>
+      // Initialization for ES Users
+      document.addEventListener('DOMContentLoaded', function () {
+        const { Carousel, initTWE } = window.TwElements;
+        initTWE({ Carousel });
+      });
+    </script>
+
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<!-- <script src="https://cdn.tailwindcss.com"></script>
+ 
+-->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.1/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .slider-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+    .slider-content {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .prev {
+      left: 10px;
+    }
+    .next {
+      right: 10px;
+    }
+  </style>
+
+  </head>
+  <body>
+
+
+    <header id="top">
+      <nav
+        class="bg-[#0F1111] h-16 flex justify-evenly items-center text-white text-sm"
+      >
+        <a
+          href=""
+          class="border border-transparent p-2 hover:border-white rounded-sm"
+        >
+          <img src="./assets/amazon_logo.png" class="w-auto h-10" alt="" />
+        </a>
+        <div
+          class="border border-transparent p-2 hover:border-white rounded-sm"
+        >
+          <p class="text-xs pl-3 text-[#ddd] p-0">Deliver To</p>
+          <div class="flex items-center gap-1">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="font-bold">Pakistan</p>
+          </div>
+        </div>
+
+        <div class="text-black flex h-12 p-1">
+          <select class="bg-[#E6E6E6] px-2 rounded-lg rounded-r-none">
+            <option>All</option>
+          </select>
+          <input
+            type="text"
+            placeholder="Search Amazon"
+            class="w-[500px] pl-2 text-base"
+          />
+          <div class="bg-orange-300 rounded-lg rounded-l-none p-2">
+            <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+          </div>
+        </div>
+        
+
+        <div
+          class="flex border border-transparent p-2 px-1 hover:border-white rounded-sm"
+        >
+          <img src="./assets/USFlag.png" class="h-4 w-5" alt="" />
+          <select class="bg-transparent font-bold" name="" id="">
+            <option>EN</option>
+          </select>
+        </div>
+
+        <div
+          class="border border-transparent p-2 hover:border-white rounded-sm"
+        >
+          <p class="text-xs">Hello, sign in</p>
+          <select class="bg-transparent font-bold" name="" id="">
+            <option value="">Accounts & List</option>
+          </select>
+        </div>
+
+        <div
+          class="border border-transparent p-2 hover:border-white rounded-sm"
+        >
+          <p class="text-xs">Returns</p>
+          <p class="font-bold">& Orders</p>
+        </div>
+
+        <div
+          class="flex items-center border border-transparent p-2 hover:border-white rounded-sm"
+        >
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+          <p class="font-bold pt-2">Cart</p>
+        </div>
+      </nav>
+
+      <div
+        class="bg-[#222F3D] h-10 flex items-center gap-x-[600px] text-white text-sm pl-4"
+      >
+        <div class="flex items-center">
+          <div
+            class="flex items-center gap-1 border border-transparent p-2 hover:border-white rounded-sm"
+          >
+            <i class="fa-solid fa-bars fa-lg"></i>
+            <p class="font-bold">All</p>
+          </div>
+          <ul class="flex items-start">
+            <li
+              class="border border-transparent p-2 hover:border-white rounded-sm font-semibold"
+            >
+              Today's Deals
+            </li>
+            <li
+              class="border border-transparent p-2 hover:border-white rounded-sm font-semibold"
+            >
+              Coustomer Service
+            </li>
+            <li
+              class="border border-transparent p-2 hover:border-white rounded-sm font-semibold"
+            >
+              Registry
+            </li>
+            <li
+              class="border border-transparent p-2 hover:border-white rounded-sm font-semibold"
+            >
+              Gift Cards
+            </li>
+            <li
+              class="border border-transparent p-2 hover:border-white rounded-sm font-semibold"
+            >
+              Sell
+            </li>
+          </ul>
+        </div>
+        <div class="font-bold">
+          <p>Shop the Gaming Store</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="bg-[#E6E6E6] ">
+      <div
+        class="bg-[url('./assets/banner.jpg')] bg-cover h-80 flex justify-center items-end"
+      >
+        <div
+          class="bg-white text-sm h-10 flex justify-center items-center w-[1460px] mb-6"
+        >
+          <p>
+            You are on amazon.com. You can also shop on Amazon Pakistan for
+            millions of products with fast local delivery.
+            <a
+              href="https://www.amazon.com/"
+              class="text-[#007185] hover:underline hover:text-orange-500"
+              >Click here to go to amazon.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 grid-rows-2 gap-4 px-4">
+        <div class="bg-white p-4">
+          <h2 class="text-xl font-bold">Shop school essentials</h2>
+          <img src="./assets/1.jpg" alt="" class="py-3" />
+          <p class="text-[#007185] text-xs">See More</p>
+        </div>
+        <div class="bg-white p-4">
+          <h2 class="text-xl font-bold">Home & Kitchen Under $30</h2>
+          <img src="assets/2.jpg" alt="" class="my-3" />
+          <a href="#" class="text-xs text-[#007185]">Shop now</a>
+        </div>
+        <div class="bg-white p-4">
+          <h2 class="text-xl font-bold">Health & Personal Care</h2>
+          <img src="assets/3.jpg" alt="" class="my-3" />
+          <a href="#" class="text-xs text-[#007185]">Shop now</a>
+        </div>
+        <div class="bg-white p-4">
+          <h2 class="text-xl font-bold">Beauty picks</h2>
+          <img src="assets/4.jpg" alt="" class="my-3" />
+          <a href="#" class="text-xs text-[#007185]">Shop now</a>
+        </div>
+        <div class="bg-white p-4">
+          <h2 class="text-xl font-bold">Electronics</h2>
+          <img src="assets/5.jpg" alt="" class="my-3" />
+          <a href="#" class="text-xs text-[#007185]">See more</a>
+        </div>
+        <div class="bg-white p-4">
+          <h2 class="text-xl font-bold">Toys Under $30</h2>
+          <img src="assets/6.jpg" alt="" class="my-3" />
+          <a href="#" class="text-xs text-[#007185]">Shop now</a>
+        </div>
+        <div class="bg-white p-4">
+          <h2 class="text-xl font-bold">For your Fitness Needs</h2>
+          <img src="assets/7.jpg" alt="" class="my-3" />
+          <a href="#" class="text-xs text-[#007185]">Shop now</a>
+        </div>
+        <div class="bg-white p-4">
+          <h2 class="text-xl font-bold">Discover fashion trends</h2>
+          <img src="assets/8.jpg" alt="" class="my-3" />
+          <a href="#" class="text-xs text-[#007185]">See more</a>
+        </div>
+      </div>
+
+      <div class=" m-8">
+        <div class="carousel rounded-box w-full">
+          <div class="carousel-item w-1/2">
+            <img
+              src="./assets/1.jpg"
+              class="w-full" />
+          </div>
+          <div class="carousel-item w-1/2">
+            <img
+              src="./assets/2.jpg"
+              class="w-full" />
+          </div>
+          <div class="carousel-item w-1/2">
+            <img
+              src="./assets/3.jpg"
+              class="w-full" />
+          </div>
+          <div class="carousel-item w-1/2">
+            <img
+              src="./assets/4.jpg"
+              class="w-full" />
+          </div>
+          <div class="carousel-item w-1/2">
+            <img
+              src="./assets/5.jpg"
+              class="w-full" />
+          </div>
+          <div class="carousel-item w-1/2">
+            <img
+              src="./assets/6.jpg"
+              class="w-full" />
+          </div>
+          <div class="carousel-item w-1/2">
+            <img
+              src="./assets/7.jpg"
+              class="w-full" />
+          </div>
+        </div>
+            </div>
+
+
+
+            <div class="slider-wrapper relative">
+              <div class="slider-content flex">
+                <div class="slide  h-64 flex items-center justify-center text-white text-2xl p-3"><img class="w-full h-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" alt=""></div>
+                <div class="slide  h-64 flex items-center justify-center text-white text-2xl p-3"><img class="w-full h-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp" alt=""></div>
+                <div class="slide  h-64 flex items-center justify-center text-white text-2xl p-3"><img class="w-full h-full rounded-lg" src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp" alt=""></div>
+              </div>
+              <button class="prev">‹</button>
+              <button class="next">›</button>
+            </div>
+          
+            
+
+
+            <div class="bg-white w-full h-48 flex items-center justify-center p-0 m-0 ">
+              <!-- <hr> -->
+               
+              <div class="border-[0.4px]  border-t-black  border-x-0 w-full  text-center p-4  ">
+                <p class="text-black font-semibold">See personalized recommendation</p>
+                <button class="bg-yellow-300 text-black px-16  rounded-md">Sign in</button>
+                <p class="text-sm">New coustomer? <a href="">Start here</a></p>
+      
+              </div>
+              <!-- <hr> -->
+            </div>
+    </main>
+
+    <footer>
+      <a href="#top">
+        <div
+          class="bg-[#37475A] h-12 flex justify-center items-center text-white text-sm"
+        >
+          <p>Back to top</p>
+        </div>
+      </a>
+
+      <div
+        class="bg-[#232F3E] h-[340px] text-[#DDD] text-sm flex justify-evenly py-10"
+      >
+        <ul class="space-y-2.5">
+          <li class="font-bold text-base text-white">Get to Know Us</li>
+          <li>Careers</li>
+          <li>Blog</li>
+          <li>About Amazon</li>
+          <li>Investor Relations</li>
+          <li>Amazon Devices</li>
+          <li>Amazon Science</li>
+        </ul>
+        <ul class="space-y-2.5">
+          <li class="text-base font-bold text-white">Make Money with Us</li>
+          <li>Sell products on Amazon</li>
+          <li>Sell on Amazon Business</li>
+          <li>Sell apps on Amazon</li>
+          <li>Become an Affiliate</li>
+          <li>Advertise Your Products</li>
+          <li>Self-Publish with Us</li>
+          <li>Host an Amazon Hub</li>
+          <li>See More Make Money with Us</li>
+        </ul>
+
+        <ul class="space-y-2.5">
+          <li class="text-base font-bold text-white">
+            Amazon Payment Products
+          </li>
+          <li>Amazon Business Card</li>
+          <li>Shop with Points</li>
+          <li>Reload Your Balance</li>
+          <li>Amazon Currency Converter</li>
+        </ul>
+
+        <ul class="space-y-2.5">
+          <li class="text-base font-bold text-white">Let Us Help You</li>
+          <li>Amazon and COVID-19</li>
+          <li>Your Account</li>
+          <li>Your Orders</li>
+          <li>Shipping Rates & Policies</li>
+          <li>Returns & Replacements</li>
+          <li>Manage Your Content and Devices</li>
+          <li>Amazon Assistant</li>
+          <li>Help</li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- <h1 class="text-3xl text-red-500 font-bold underline">
+        Hello world!
+      </h1> -->
+
+
+
+      <script>
+        const slides = document.querySelectorAll('.slide');
+        const sliderContent = document.querySelector('.slider-content');
+        let index = 0;
+    
+        function showSlide(n) {
+          if (n >= slides.length) index = 0;
+          else if (n < 0) index = slides.length - 1;
+          else index = n;
+          sliderContent.style.transform = `translateX(${-index * 100}%)`;
+        }
+    
+        document.querySelector('.next').addEventListener('click', () => showSlide(index + 1));
+        document.querySelector('.prev').addEventListener('click', () => showSlide(index - 1));
+    
+        // Optional: Auto slide
+        setInterval(() => showSlide(index + 1), 5000);
+      </script>
+  </body>
+</html>
