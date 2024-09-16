@@ -1,19 +1,18 @@
-# Amazon Clone with HTML & Tailwind CSS
+# Amazon Clone - Home Page
 
 ## Overview
 
-This project is a clone of the Amazon e-commerce platform, built using HTML and Tailwind CSS. It showcases a clean and responsive design, providing a similar look and feel to Amazon's site.
+This project is a clone of the Amazon home page, built using HTML and Tailwind CSS. It provides a clean and responsive design, replicating the look and feel of Amazon's home page.
 
 ## Features
 
-- **Product Listings**: Display a grid of products with images, prices, and descriptions.
-- **Navigation Bar**: Responsive navigation for seamless browsing.
-- **Product Details Page**: Detailed information for each product.
+- **Product Grid**: Showcases featured products with images, prices, and descriptions.
 - **Responsive Design**: Adapts to different screen sizes for optimal viewing.
+- **Navigation Bar**: Includes links to various sections for easy navigation.
 
 ## Technologies Used
 
-- **HTML**: For the structure and content of the web pages.
+- **HTML**: For structuring the content of the web page.
 - **Tailwind CSS**: For styling and responsive design.
 
 ## Installation
